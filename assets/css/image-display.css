@@ -1,0 +1,411 @@
+/* ============================================
+   Enhanced Image Display CSS Classes
+   ============================================ */
+
+/* ============================================
+   Image Container Base Classes
+   ============================================ */
+
+/* Hero Image Container - للصور الرئيسية الكبيرة */
+.image-container-hero {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background-color: #f3f4f6; /* gray-100 */
+    border-radius: 1.5rem; /* rounded-2xl */
+}
+
+/* Card Image Container - للصور في البطاقات */
+.image-container-card {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background-color: #f3f4f6; /* gray-100 */
+    border-radius: 1rem; /* rounded-xl */
+}
+
+/* Thumbnail Image Container - للصور المصغرة */
+.image-container-thumbnail {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: #f3f4f6; /* gray-100 */
+    border-radius: 0.75rem; /* rounded-xl */
+}
+
+/* ============================================
+   Enhanced Image Element Classes
+   ============================================ */
+
+/* Base Image Class - الفئة الأساسية للصور */
+.enhanced-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+/* Hover Effects */
+.enhanced-image:hover {
+    transform: scale(1.05);
+}
+
+/* Loading States */
+.enhanced-image[loading="lazy"] {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+/* ============================================
+   Responsive Image Classes
+   ============================================ */
+
+/* Mobile First Approach */
+.responsive-image-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+/* Mobile (default) */
+.responsive-image-container {
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    min-height: 200px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .responsive-image-container {
+        aspect-ratio: 16/9;
+        border-radius: 1.5rem;
+        min-height: 250px;
+    }
+    
+    .image-container-hero {
+        min-height: 360px;
+    }
+    
+    .image-container-card {
+        min-height: 220px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .responsive-image-container {
+        aspect-ratio: 16/9;
+        border-radius: 2rem;
+        min-height: 320px;
+    }
+    
+    .image-container-hero {
+        min-height: 400px;
+    }
+    
+    .image-container-card {
+        min-height: 280px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+    .image-container-hero {
+        min-height: 450px;
+    }
+    
+    .image-container-card {
+        min-height: 320px;
+    }
+}
+
+/* ============================================
+   Fallback and Error Handling Classes
+   ============================================ */
+
+/* Fallback Container */
+.image-fallback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af; /* gray-400 */
+    font-size: 3rem;
+}
+
+/* Error State */
+.image-error {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ef4444; /* red-500 */
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.image-error::before {
+    content: "⚠️";
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Loading Placeholder */
+.image-loading {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-loading::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Specialized Container Classes
+   ============================================ */
+
+/* Latest Articles Image Container */
+.latest-articles-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    border-radius: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .latest-articles-image {
+        aspect-ratio: 16/9;
+        min-height: 320px;
+    }
+}
+
+/* Hero Section Main Image */
+.hero-main-image {
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    border-radius: 1.5rem;
+    min-height: 320px;
+}
+
+@media (min-width: 768px) {
+    .hero-main-image {
+        border-radius: 2rem;
+        min-height: 360px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-main-image {
+        border-radius: 2.5rem;
+        min-height: 400px;
+    }
+}
+
+/* Hero Section Side Images */
+.hero-side-image {
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    border-radius: 1.5rem;
+    min-height: 180px;
+}
+
+@media (min-width: 768px) {
+    .hero-side-image {
+        border-radius: 2rem;
+        min-height: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-side-image {
+        border-radius: 2.5rem;
+        min-height: 250px;
+    }
+}
+
+/* Hero Section Sub Images */
+.hero-sub-image {
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    border-radius: 1rem;
+    min-height: 160px;
+}
+
+@media (min-width: 768px) {
+    .hero-sub-image {
+        border-radius: 1.5rem;
+        min-height: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-sub-image {
+        border-radius: 2rem;
+        min-height: 200px;
+    }
+}
+
+/* ============================================
+   Performance Optimization Classes
+   ============================================ */
+
+/* Lazy Loading Optimization */
+.image-lazy-load {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-lazy-load[data-loaded="true"] {
+    opacity: 1;
+}
+
+.image-lazy-load[data-loaded="false"] {
+    opacity: 0.7;
+}
+
+/* Eager Loading for Above-the-fold Images */
+.image-eager-load {
+    background: transparent;
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+/* Focus States for Keyboard Navigation */
+.enhanced-image:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .enhanced-image,
+    .enhanced-image:hover {
+        transition: none;
+        transform: none;
+    }
+    
+    .image-loading::after {
+        animation: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .image-fallback {
+        background: #ffffff;
+        border: 2px solid #000000;
+        color: #000000;
+    }
+    
+    .image-error {
+        background: #ffffff;
+        border: 2px solid #dc2626;
+        color: #dc2626;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .enhanced-image {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .image-fallback,
+    .image-error,
+    .image-loading {
+        display: none;
+    }
+}
+
+/* ============================================
+   Dark Mode Support
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    .image-fallback {
+        background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+        color: #6b7280;
+    }
+    
+    .image-loading {
+        background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    }
+    
+    .image-loading::after {
+        border-color: #1f2937;
+        border-top-color: #60a5fa;
+    }
+}
+
+/* Body Dark Mode Classes */
+body.dark-mode .image-fallback {
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    color: #6b7280;
+}
+
+body.dark-mode .image-loading {
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+}
+
+body.dark-mode .image-loading::after {
+    border-color: #1f2937;
+    border-top-color: #60a5fa;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+/* Aspect Ratio Utilities */
+.aspect-square { aspect-ratio: 1/1; }
+.aspect-video { aspect-ratio: 16/9; }
+.aspect-photo { aspect-ratio: 4/3; }
+.aspect-portrait { aspect-ratio: 3/4; }
+.aspect-wide { aspect-ratio: 21/9; }
+
+/* Object Fit Utilities */
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+.object-fill { object-fit: fill; }
+.object-scale-down { object-fit: scale-down; }
+.object-none { object-fit: none; }
+
+/* Object Position Utilities */
+.object-center { object-position: center; }
+.object-top { object-position: top; }
+.object-bottom { object-position: bottom; }
+.object-left { object-position: left; }
+.object-right { object-position: right; }

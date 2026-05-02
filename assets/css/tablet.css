@@ -1,0 +1,345 @@
+/* ============================================
+   Tablet-Specific Optimizations (768px - 1023px)
+   Sports News Theme - Responsive Design
+   ============================================ */
+
+/* Tablet Portrait & Landscape */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Ensure header is visible on tablet */
+    .main-header {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 100;
+    }
+
+    /* ===== Layout & Containers ===== */
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* ===== Header Optimizations ===== */
+    /* Fix logo size on tablet */
+    .logo-link img {
+        max-height: 3.25rem;
+    }
+
+    /* Adjust right panel spacing */
+    .header-right {
+        gap: 0.75rem;
+    }
+    
+    /* Fix account dropdown on tablet */
+    .account-menu {
+        z-index: 1001;
+        min-width: 200px;
+        max-width: 300px;
+    }
+    
+    .account-btn {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.625rem 0.75rem;
+    }
+    
+    .account-btn span {
+        display: inline;
+        font-size: 0.875rem;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero-section {
+        min-height: 500px;
+    }
+
+    .hero-section .main-story {
+        min-height: 350px;
+    }
+
+    .hero-section .side-story {
+        min-height: 220px;
+    }
+
+    /* ===== Grid Layouts ===== */
+    /* 2-column grid for tablet */
+    .grid.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Main content area - 8/4 becomes full width with sidebar below */
+    .lg\:col-span-8 {
+        grid-column: span 12 / span 12;
+    }
+
+    .lg\:col-span-4 {
+        grid-column: span 12 / span 12;
+    }
+
+    /* ===== Article Cards ===== */
+    article.news-card {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    article.news-card .image-container {
+        width: 200px;
+        height: 150px;
+    }
+
+    /* ===== Sidebar ===== */
+    aside {
+        margin-top: 3rem;
+    }
+
+    aside .widget {
+        padding: 1.5rem;
+    }
+
+    /* ===== Tables ===== */
+    table {
+        font-size: 0.875rem;
+    }
+
+    table th,
+    table td {
+        padding: 1rem 0.75rem;
+    }
+
+    /* Show some hidden columns on tablet */
+    .hidden.sm\:table-cell {
+        display: table-cell;
+    }
+
+    /* ===== Footer ===== */
+    footer .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    footer .newsletter-form {
+        flex-direction: row;
+    }
+
+    footer .newsletter-form input {
+        flex: 1;
+    }
+
+    /* ===== Forms ===== */
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+        padding: 0.875rem 1rem;
+    }
+
+    button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* ===== Touch Targets ===== */
+    .touch-target,
+    button,
+    a.button,
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* ===== Spacing Adjustments ===== */
+    .py-20 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .py-24 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .py-16 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* ===== Ticker ===== */
+    .ticker {
+        font-size: 0.8125rem;
+    }
+
+    /* ===== Video Section ===== */
+    .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    /* ===== Tabs ===== */
+    .tabs-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tab-btn {
+        white-space: nowrap;
+        font-size: 0.75rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    /* ===== Images ===== */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ===== Border Radius ===== */
+    .rounded-\[2\.5rem\] {
+        border-radius: 2rem;
+    }
+
+    .rounded-\[2rem\] {
+        border-radius: 1.5rem;
+    }
+
+    .rounded-\[3rem\] {
+        border-radius: 2rem;
+    }
+
+    /* ===== Shadows - Reduce for performance ===== */
+    .shadow-2xl {
+        box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .shadow-xl {
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ===== Animations - Optimize for tablet ===== */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* ===== Performance Optimizations ===== */
+    .hover\:scale-110:hover {
+        transform: scale(1.05);
+        /* Reduce scale for better performance */
+    }
+
+    /* ===== Landscape Orientation Specific ===== */
+    @media (orientation: landscape) {
+        .hero-section {
+            min-height: 400px;
+        }
+
+        .hero-section .main-story {
+            min-height: 300px;
+        }
+    }
+}
+
+/* ===== Tablet Portrait Only (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Stack sidebar below content on smaller tablets */
+    .content-sidebar-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* ===== Tablet Landscape Only (992px - 1023px) ===== */
+@media (min-width: 992px) and (max-width: 1023px) {
+
+    /* Can show sidebar side-by-side on larger tablets */
+    .lg\:col-span-8 {
+        grid-column: span 8 / span 8;
+    }
+
+    .lg\:col-span-4 {
+        grid-column: span 4 / span 4;
+    }
+
+    /* Show desktop-like 3-column grid */
+    .grid.lg\:grid-cols-4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ============================================
+   Hero Section Tablet Optimizations
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Hero Section Container */
+    section.hero-section {
+        padding-bottom: 3rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* Stack hero on tablet - Only target main grid */
+    .hero-section>.container>.grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        height: auto !important;
+    }
+
+    /* Main Story - Full width on tablet */
+    .hero-section .lg\:col-span-7 {
+        grid-column: span 1 / span 1 !important;
+        min-height: 400px !important;
+    }
+
+    .lg\:col-span-7 .p-10 {
+        padding: 2.25rem !important;
+    }
+
+    .hero-section .lg\:col-span-7 h2.text-3xl {
+        font-size: 1.875rem !important;
+    }
+
+    /* Side Stories Container - Full width on tablet */
+    .hero-section .lg\:col-span-5 {
+        grid-column: span 1 / span 1 !important;
+    }
+
+    .hero-section .lg\:col-span-5>div {
+        min-height: 240px !important;
+    }
+
+    /* Sub stories grid */
+    .hero-section .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.25rem !important;
+    }
+}
+
+/* Tablet Portrait specific */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    .lg\:col-span-7 {
+        min-height: 380px !important;
+    }
+}
+
+/* Tablet Landscape specific */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .lg\:col-span-7 {
+        min-height: 360px !important;
+    }
+
+    .lg\:col-span-5>div {
+        min-height: 240px !important;
+    }
+}

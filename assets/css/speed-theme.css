@@ -1,0 +1,1459 @@
+/* ============================================
+   Speed Theme - Dynamic Theme Colors
+   Sports News Theme - High Energy Design
+   ============================================ */
+
+/* CSS Variables for Speed Theme Colors */
+:root {
+    /* Primary Speed Colors - Dynamic Reds, Oranges, Blues */
+    --speed-primary: #FF4500;          /* Orange Red - Energy & Speed */
+    --speed-primary-rgb: 255, 69, 0;
+    --speed-primary-light: #FF6A33;    /* Lighter Orange Red */
+    --speed-primary-dark: #E03E00;     /* Darker Orange Red */
+    --speed-primary-50: rgba(255, 69, 0, 0.05);
+    --speed-primary-10: rgba(255, 69, 0, 0.1);
+    --speed-primary-20: rgba(255, 69, 0, 0.2);
+    --speed-primary-30: rgba(255, 69, 0, 0.3);
+    --speed-primary-40: rgba(255, 69, 0, 0.4);
+    --speed-primary-50-opacity: rgba(255, 69, 0, 0.5);
+    --speed-primary-60: rgba(255, 69, 0, 0.6);
+    --speed-primary-70: rgba(255, 69, 0, 0.7);
+    --speed-primary-80: rgba(255, 69, 0, 0.8);
+    --speed-primary-90: rgba(255, 69, 0, 0.9);
+
+    /* Secondary Speed Colors - Blues for contrast */
+    --speed-secondary: #1E90FF;        /* Dodger Blue - Motion & Velocity */
+    --speed-secondary-rgb: 30, 144, 255;
+    --speed-secondary-light: #4AA0FF;  /* Lighter Blue */
+    --speed-secondary-dark: #1874CD;   /* Darker Blue */
+    --speed-secondary-50: rgba(30, 144, 255, 0.05);
+    --speed-secondary-10: rgba(30, 144, 255, 0.1);
+    --speed-secondary-20: rgba(30, 144, 255, 0.2);
+    --speed-secondary-80: rgba(30, 144, 255, 0.8);
+    --speed-secondary-90: rgba(30, 144, 255, 0.9);
+
+    /* Accent Speed Colors - Additional energy */
+    --speed-accent: #FFD700;           /* Gold - Dynamic highlights */
+    --speed-accent-rgb: 255, 215, 0;
+    --speed-accent-light: #FFE55C;     /* Light Gold */
+    --speed-accent-dark: #FFC000;      /* Dark Gold */
+    --speed-accent-10: rgba(255, 215, 0, 0.1);
+    --speed-accent-20: rgba(255, 215, 0, 0.2);
+    --speed-accent-50: rgba(255, 215, 0, 0.5);
+
+    /* Speed-themed grays for balance */
+    --speed-gray: #2C2C2C;             /* Dark gray for contrast */
+    --speed-gray-light: #F5F5F5;       /* Light gray background */
+    --speed-gray-medium: #888888;      /* Medium gray for text */
+}
+
+/* Apply speed theme colors to elements */
+.speed-theme .text-speed-primary,
+.speed-theme .hover\:text-speed-primary:hover {
+    color: var(--speed-primary) !important;
+}
+
+.speed-theme .bg-speed-primary {
+    background-color: var(--speed-primary) !important;
+}
+
+.speed-theme .border-speed-primary {
+    border-color: var(--speed-primary) !important;
+}
+
+.speed-theme .ring-speed-primary {
+    --tw-ring-color: var(--speed-primary) !important;
+}
+
+.speed-theme .text-speed-secondary {
+    color: var(--speed-secondary) !important;
+}
+
+.speed-theme .bg-speed-secondary {
+    background-color: var(--speed-secondary) !important;
+}
+
+.speed-theme .border-speed-secondary {
+    border-color: var(--speed-secondary) !important;
+}
+
+.speed-theme .ring-speed-secondary {
+    --tw-ring-color: var(--speed-secondary) !important;
+}
+
+.speed-theme .text-speed-accent {
+    color: var(--speed-accent) !important;
+}
+
+.speed-theme .bg-speed-accent {
+    background-color: var(--speed-accent) !important;
+}
+
+/* Hover states for speed theme */
+.speed-theme .hover\:bg-speed-primary:hover {
+    background-color: var(--speed-primary) !important;
+}
+
+.speed-theme .hover\:bg-speed-primary\/90:hover {
+    background-color: var(--speed-primary-90) !important;
+}
+
+.speed-theme .hover\:border-speed-primary:hover {
+    border-color: var(--speed-primary) !important;
+}
+
+/* Focus states for speed theme */
+.speed-theme .focus\:border-speed-primary:focus {
+    border-color: var(--speed-primary) !important;
+}
+
+.speed-theme .focus\:ring-speed-primary:focus {
+    --tw-ring-color: var(--speed-primary) !important;
+}
+
+/* Opacity variations for speed theme */
+.speed-theme .bg-speed-primary\/5 {
+    background-color: var(--speed-primary-50) !important;
+}
+
+.speed-theme .bg-speed-primary\/10 {
+    background-color: var(--speed-primary-10) !important;
+}
+
+.speed-theme .bg-speed-primary\/20 {
+    background-color: var(--speed-primary-20) !important;
+}
+
+.speed-theme .border-speed-primary\/5 {
+    border-color: var(--speed-primary-50) !important;
+}
+
+.speed-theme .border-speed-primary\/10 {
+    border-color: var(--speed-primary-10) !important;
+}
+
+.speed-theme .border-speed-primary\/20 {
+    border-color: var(--speed-primary-20) !important;
+}
+
+/* Shadow with speed theme colors */
+.speed-theme .shadow-speed-primary\/20 {
+    --tw-shadow-color: var(--speed-primary-20) !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* Ring with speed theme colors */
+.speed-theme .ring-speed-primary\/10 {
+    --tw-ring-color: var(--speed-primary-10) !important;
+}
+
+/* Group hover states for speed theme */
+.speed-theme .group:hover .group-hover\:text-speed-primary {
+    color: var(--speed-primary) !important;
+}
+
+.speed-theme .group:hover .group-hover\:bg-speed-primary {
+    background-color: var(--speed-primary) !important;
+}
+
+/* Gradient backgrounds for speed theme */
+.speed-theme .from-speed-primary {
+    --tw-gradient-from: var(--speed-primary) !important;
+}
+
+.speed-theme .to-speed-primary {
+    --tw-gradient-to: var(--speed-primary) !important;
+}
+
+/* ============================================
+   Speed-Themed Typography
+   ============================================ */
+
+/* Speed-themed font families */
+.speed-theme {
+    --font-family-speed-main: 'Oswald', 'Noto Kufi Arabic', sans-serif;
+    --font-family-speed-accent: 'Racing Sans One', 'Noto Kufi Arabic', sans-serif;
+    --font-family-speed-body: 'Exo 2', 'Noto Naskh Arabic', serif;
+}
+
+/* Apply speed-themed fonts */
+.speed-theme,
+.speed-theme body {
+    font-family: var(--font-family-speed-body);
+}
+
+.speed-theme h1,
+.speed-theme h2,
+.speed-theme h3,
+.speed-theme h4,
+.speed-theme h5,
+.speed-theme h6,
+.speed-theme .kufi,
+.speed-theme .speed-heading {
+    font-family: var(--font-family-speed-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+/* Dynamic heading styles */
+.speed-theme .speed-heading-urgent {
+    font-family: var(--font-family-speed-accent);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: speed-text-pulse 1s infinite alternate;
+}
+
+@keyframes speed-text-pulse {
+    from { letter-spacing: 2px; }
+    to { letter-spacing: 4px; }
+}
+
+/* Speed-themed text animations */
+.speed-theme .text-speed-motion {
+    display: inline-block;
+    animation: speed-text-motion 3s linear infinite;
+}
+
+@keyframes speed-text-motion {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(5px); }
+}
+
+/* Speed-themed text gradients */
+.speed-theme .text-speed-gradient {
+    background: linear-gradient(90deg, var(--speed-primary), var(--speed-secondary), var(--speed-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 300% auto;
+    animation: speed-text-shine 3s linear infinite;
+}
+
+@keyframes speed-text-shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Speed-themed font weights */
+.speed-theme .font-speed-light {
+    font-weight: 300;
+}
+
+.speed-theme .font-speed-regular {
+    font-weight: 400;
+}
+
+.speed-theme .font-speed-medium {
+    font-weight: 500;
+}
+
+.speed-theme .font-speed-semibold {
+    font-weight: 600;
+}
+
+.speed-theme .font-speed-bold {
+    font-weight: 700;
+}
+
+.speed-theme .font-speed-extrabold {
+    font-weight: 800;
+}
+
+.speed-theme .font-speed-black {
+    font-weight: 900;
+}
+
+/* Speed-themed font sizes */
+.speed-theme .text-speed-xs {
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.speed-theme .text-speed-sm {
+    font-size: 0.875rem;
+    line-height: 1.25;
+}
+
+.speed-theme .text-speed-base {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.speed-theme .text-speed-lg {
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.speed-theme .text-speed-xl {
+    font-size: 1.25rem;
+    line-height: 1.75;
+}
+
+.speed-theme .text-speed-2xl {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.speed-theme .text-speed-3xl {
+    font-size: 1.875rem;
+    line-height: 1.375;
+}
+
+.speed-theme .text-speed-4xl {
+    font-size: 2.25rem;
+    line-height: 1.25;
+}
+
+.speed-theme .text-speed-5xl {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* Speed-themed text transformations */
+.speed-theme .uppercase {
+    text-transform: uppercase;
+}
+
+.speed-theme .lowercase {
+    text-transform: lowercase;
+}
+
+.speed-theme .capitalize {
+    text-transform: capitalize;
+}
+
+.speed-theme .normal-case {
+    text-transform: none;
+}
+
+/* Speed-themed text decorations */
+.speed-theme .underline-speed {
+    text-decoration: underline;
+    text-decoration-color: var(--speed-primary);
+    text-decoration-thickness: 2px;
+}
+
+.speed-theme .line-through-speed {
+    text-decoration: line-through;
+    text-decoration-color: var(--speed-secondary);
+}
+
+/* Speed-themed text shadows */
+.speed-theme .text-shadow-speed {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.speed-theme .text-shadow-speed-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated text elements */
+.speed-theme .animate-text-urgent {
+    animation: speed-text-urgent 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes speed-text-urgent {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* Speed-themed typography utilities */
+.speed-theme .tracking-tighter-speed { letter-spacing: -0.05em; }
+.speed-theme .tracking-tight-speed { letter-spacing: -0.025em; }
+.speed-theme .tracking-normal-speed { letter-spacing: 0; }
+.speed-theme .tracking-wide-speed { letter-spacing: 0.025em; }
+.speed-theme .tracking-wider-speed { letter-spacing: 0.05em; }
+.speed-theme .tracking-widest-speed { letter-spacing: 0.1em; }
+
+/* ============================================
+   Speed-Themed Motion and Dynamic Effects
+   ============================================ */
+
+/* Speed-themed animations */
+@keyframes speed-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes speed-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    }
+}
+
+@keyframes speed-motion {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(5px) scale(1.02);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Apply animations to speed theme elements */
+.speed-theme .animate-speed-pulse {
+    animation: speed-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.speed-theme .animate-speed-glow {
+    animation: speed-glow 2s ease-in-out infinite;
+}
+
+.speed-theme .animate-speed-motion {
+    animation: speed-motion 0.5s ease-in-out infinite;
+}
+
+/* Speed-themed button styles */
+.speed-theme .btn-speed {
+    background: linear-gradient(135deg, var(--speed-primary), var(--speed-secondary));
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+}
+
+.speed-theme .btn-speed:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+}
+
+.speed-theme .btn-speed:active {
+    transform: translateY(0);
+}
+
+.speed-theme .btn-speed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.speed-theme .btn-speed:hover::before {
+    left: 100%;
+}
+
+/* Speed-themed navigation */
+.speed-theme .nav-item-speed {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: var(--speed-gray);
+    transition: all 0.3s ease;
+    border-radius: var(--radius-sm);
+}
+
+.speed-theme .nav-item-speed:hover {
+    color: var(--speed-primary);
+    background-color: var(--speed-primary-10);
+    transform: translateX(5px);
+}
+
+.speed-theme .nav-item-speed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--speed-primary);
+    transition: width 0.3s ease;
+}
+
+.speed-theme .nav-item-speed:hover::after {
+    width: 100%;
+}
+
+/* Speed-themed cards and content blocks */
+.speed-theme .card-speed {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--speed-primary-20);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .card-speed:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.15);
+    border-color: var(--speed-primary-30);
+}
+
+.speed-theme .card-speed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--speed-primary), var(--speed-secondary));
+    transition: all 0.3s ease;
+}
+
+.speed-theme .card-speed:hover::before {
+    width: 100%;
+    opacity: 0.1;
+}
+
+/* Speed-themed progress indicators */
+.speed-theme .speed-progress {
+    height: 8px;
+    background-color: var(--speed-gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.speed-theme .speed-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--speed-primary), var(--speed-secondary));
+    border-radius: 4px;
+    width: 0;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.speed-theme .speed-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: speed-shine 1.5s infinite;
+}
+
+@keyframes speed-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Speed-themed timeline */
+.speed-theme .speed-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.speed-theme .speed-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--speed-primary), var(--speed-secondary));
+    left: 20px;
+    border-radius: 2px;
+}
+
+.speed-theme .speed-timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 50px;
+}
+
+.speed-theme .speed-timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--speed-primary);
+    left: 11px;
+    top: 5px;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--speed-secondary);
+}
+
+/* Speed-themed loading indicators */
+.speed-theme .speed-loader {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--speed-primary-20);
+    border-radius: 50%;
+    border-top-color: var(--speed-primary);
+    animation: speed-spin 1s ease-in-out infinite;
+}
+
+@keyframes speed-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Speed-themed velocity indicators */
+.speed-theme .velocity-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, var(--speed-primary), var(--speed-accent));
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.speed-theme .velocity-indicator::before {
+    content: '●';
+    margin-right: 0.25rem;
+    animation: speed-pulse 1s infinite;
+}
+
+/* Speed-themed alerts and notifications */
+.speed-theme .alert-speed {
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--speed-primary-10);
+    border-left: 4px solid var(--speed-primary);
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    animation: speed-notify 0.5s ease-out;
+}
+
+@keyframes speed-notify {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Speed-themed badges */
+.speed-theme .badge-speed {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background: var(--speed-primary);
+    color: white;
+    letter-spacing: 0.5px;
+    text-align: center;
+    min-width: 60px;
+    animation: speed-badge-pulse 2s infinite;
+}
+
+@keyframes speed-badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 8px rgba(255, 69, 0, 0);
+    }
+}
+
+/* Speed-themed borders */
+.speed-theme .border-speed {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, var(--speed-primary), var(--speed-secondary)) border-box;
+}
+
+.speed-theme .border-speed-dashed {
+    border: 2px dashed var(--speed-primary);
+    position: relative;
+}
+
+.speed-theme .border-speed-dashed::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, var(--speed-primary), transparent);
+    opacity: 0.5;
+    animation: speed-dash 1s linear infinite;
+}
+
+@keyframes speed-dash {
+    0% { transform: translateX(-20px); }
+    100% { transform: translateX(20px); }
+}
+
+/* Speed-themed background patterns */
+.speed-theme .bg-speed-pattern {
+    background: 
+        linear-gradient(90deg, 
+            transparent 24px, 
+            var(--speed-primary-10) 25px, 
+            var(--speed-primary-10) 26px, 
+            transparent 27px,
+            transparent 74px,
+            var(--speed-primary-10) 75px,
+            var(--speed-primary-10) 76px,
+            transparent 77px),
+        linear-gradient(0deg, 
+            transparent 24px, 
+            var(--speed-primary-10) 25px, 
+            var(--speed-primary-10) 26px, 
+            transparent 27px,
+            transparent 74px,
+            var(--speed-primary-10) 75px,
+            var(--speed-primary-10) 76px,
+            transparent 77px);
+}
+
+/* Speed-themed text effects */
+.speed-theme .text-speed-glow {
+    color: var(--speed-primary);
+    text-shadow: 
+        0 0 5px rgba(255, 69, 0, 0.5),
+        0 0 10px rgba(255, 69, 0, 0.3),
+        0 0 15px rgba(255, 69, 0, 0.2);
+}
+
+.speed-theme .text-speed-animated {
+    background: linear-gradient(90deg, var(--speed-primary), var(--speed-secondary), var(--speed-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: speed-text-shine 3s linear infinite;
+}
+
+@keyframes speed-text-shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* ============================================
+   Advanced Speed-Themed Motion Effects
+   ============================================ */
+
+/* Speed-themed motion blur effect */
+.speed-theme .motion-blur {
+    filter: blur(0.5px);
+    transition: filter 0.2s ease;
+}
+
+.speed-theme .motion-blur.active {
+    filter: blur(1px);
+}
+
+/* Speed-themed velocity lines */
+.speed-theme .velocity-lines {
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .velocity-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: speed-velocity-lines 1.5s infinite;
+}
+
+@keyframes speed-velocity-lines {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Speed-themed motion trails */
+.speed-theme .motion-trail {
+    position: relative;
+}
+
+.speed-theme .motion-trail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(255, 69, 0, 0.1) 25%, 
+        transparent 50%, 
+        rgba(255, 69, 0, 0.1) 75%, 
+        transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.speed-theme .motion-trail:hover::after {
+    opacity: 1;
+}
+
+/* Speed-themed acceleration effect */
+.speed-theme .accelerate {
+    animation: speed-accelerate 2s infinite;
+}
+
+@keyframes speed-accelerate {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.02) translateX(2px); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+/* Speed-themed deceleration effect */
+.speed-theme .decelerate {
+    animation: speed-decelerate 2s infinite;
+}
+
+@keyframes speed-decelerate {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(0.98) translateX(-2px); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+/* Speed-themed rotation effects */
+.speed-theme .spin-slow {
+    animation: speed-spin-slow 4s linear infinite;
+}
+
+.speed-theme .spin-medium {
+    animation: speed-spin-medium 2s linear infinite;
+}
+
+.speed-theme .spin-fast {
+    animation: speed-spin-fast 1s linear infinite;
+}
+
+@keyframes speed-spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes speed-spin-medium {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes speed-spin-fast {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Speed-themed pulse effects */
+.speed-theme .pulse-speed {
+    animation: speed-pulse-effect 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.speed-theme .pulse-speed-slow {
+    animation: speed-pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes speed-pulse-effect {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+}
+
+@keyframes speed-pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+}
+
+/* Speed-themed flow effects */
+.speed-theme .flow-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .flow-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: speed-flow 1s infinite;
+}
+
+@keyframes speed-flow {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Speed-themed velocity indicators */
+.speed-theme .speed-indicator {
+    display: inline-block;
+    position: relative;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, var(--speed-primary), var(--speed-secondary));
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+}
+
+.speed-theme .speed-indicator::before {
+    content: '●';
+    margin-right: 0.25rem;
+    animation: speed-indicator-pulse 1s infinite;
+}
+
+@keyframes speed-indicator-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+/* Speed-themed dynamic bars */
+.speed-theme .dynamic-bar {
+    height: 6px;
+    background: var(--speed-primary-20);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.speed-theme .dynamic-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--speed-primary), var(--speed-secondary));
+    border-radius: 3px;
+    width: 0;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.speed-theme .dynamic-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: speed-bar-shine 1.5s infinite;
+}
+
+@keyframes speed-bar-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Speed-themed speedometer effect */
+.speed-theme .speedometer {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--speed-primary-10), var(--speed-secondary-10));
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
+}
+
+.speed-theme .speedometer::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 5px;
+    background: var(--speed-gray-light);
+    border-radius: 2px;
+}
+
+.speed-theme .speedometer-fill {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--speed-primary), var(--speed-secondary));
+    border-radius: 2px;
+    width: 0;
+    transition: width 1s ease;
+}
+
+/* Speed-themed dynamic arrow */
+.speed-theme .arrow-speed {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.speed-theme .arrow-speed::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    animation: speed-arrow-move 1s infinite;
+    color: var(--speed-primary);
+}
+
+@keyframes speed-arrow-move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Speed-themed dynamic border */
+.speed-theme .border-dynamic {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+}
+
+.speed-theme .border-dynamic::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: var(--radius-md);
+    z-index: -1;
+    background: linear-gradient(45deg, var(--speed-primary), var(--speed-secondary), var(--speed-accent), var(--speed-primary));
+    background-size: 400% 400%;
+    animation: speed-border-gradient 3s ease infinite;
+}
+
+@keyframes speed-border-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Speed-themed ripple effect */
+.speed-theme .ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .ripple-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 69, 0, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.speed-theme .ripple-effect:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+
+/* Speed-themed progress indicators */
+.speed-theme .progress-speed {
+    height: 8px;
+    background-color: var(--speed-gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.speed-theme .progress-speed-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--speed-primary), var(--speed-secondary));
+    border-radius: 4px;
+    width: 0;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.speed-theme .progress-speed-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: speed-progress-shine 1.5s infinite;
+}
+
+/* Speed-themed particle effect */
+.speed-theme .particle-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .particle-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 69, 0, 0.1) 0%, transparent 5%),
+        radial-gradient(circle at 80% 30%, rgba(30, 144, 255, 0.1) 0%, transparent 5%),
+        radial-gradient(circle at 40% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 5%);
+    animation: speed-particles-move 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes speed-particles-move {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(10px, 10px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Speed-themed dynamic overlay */
+.speed-theme .overlay-speed {
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .overlay-speed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        transparent 49%, 
+        rgba(255, 69, 0, 0.1) 50%, 
+        transparent 51%);
+    background-size: 20px 20px;
+    animation: speed-overlay-move 2s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes speed-overlay-move {
+    0% { transform: translateX(-20px) translateY(-20px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+/* ============================================
+   Speed Theme Compatibility Fixes
+   ============================================ */
+
+/* Ensure speed theme overrides default styles properly */
+.speed-theme {
+    /* Override default colors */
+    --primary: var(--speed-primary);
+    --primary-rgb: var(--speed-primary-rgb);
+    --secondary: var(--speed-secondary);
+    --secondary-rgb: var(--speed-secondary-rgb);
+}
+
+/* Speed theme compatibility with existing components */
+.speed-theme .ticker {
+    animation: ticker-rtl 30s linear infinite;
+    display: inline-flex;
+    will-change: transform;
+}
+
+.speed-theme .glass-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Speed theme button overrides */
+.speed-theme .btn {
+    background: linear-gradient(135deg, var(--speed-primary), var(--speed-secondary));
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+}
+
+.speed-theme .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+}
+
+/* Speed theme card overrides */
+.speed-theme .card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--speed-primary-20);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.speed-theme .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.15);
+    border-color: var(--speed-primary-30);
+}
+
+/* Speed theme form elements */
+.speed-theme input[type="text"],
+.speed-theme input[type="email"],
+.speed-theme input[type="password"],
+.speed-theme textarea,
+.speed-theme select {
+    border: 2px solid var(--speed-primary-20);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.speed-theme input[type="text"]:focus,
+.speed-theme input[type="email"]:focus,
+.speed-theme input[type="password"]:focus,
+.speed-theme textarea:focus,
+.speed-theme select:focus {
+    outline: none;
+    border-color: var(--speed-primary);
+    box-shadow: 0 0 0 3px var(--speed-primary-20);
+}
+
+/* Speed theme links */
+.speed-theme a {
+    color: var(--speed-primary);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.speed-theme a:hover {
+    color: var(--speed-secondary);
+}
+
+.speed-theme a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--speed-primary);
+    transition: width 0.3s ease;
+}
+
+.speed-theme a:hover::after {
+    width: 100%;
+}
+
+/* Speed theme navigation */
+.speed-theme nav ul li a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: var(--speed-gray);
+    transition: all 0.3s ease;
+    border-radius: var(--radius-sm);
+}
+
+.speed-theme nav ul li a:hover {
+    color: var(--speed-primary);
+    background-color: var(--speed-primary-10);
+    transform: translateX(5px);
+}
+
+.speed-theme nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--speed-primary);
+    transition: width 0.3s ease;
+}
+
+.speed-theme nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Speed theme mobile menu */
+.speed-theme #mobileMenuPanel {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Speed theme typography overrides */
+.speed-theme .kufi {
+    font-family: var(--font-family-speed-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.speed-theme h1,
+.speed-theme h2,
+.speed-theme h3,
+.speed-theme h4,
+.speed-theme h5,
+.speed-theme h6 {
+    font-family: var(--font-family-speed-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+/* Speed theme article cards */
+.speed-theme article.news-card {
+    border: 1px solid var(--speed-primary-20);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.speed-theme article.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.15);
+    border-color: var(--speed-primary-30);
+}
+
+/* Speed theme footer */
+.speed-theme footer {
+    background: linear-gradient(135deg, var(--speed-gray), var(--speed-gray-light));
+    color: var(--speed-gray);
+}
+
+.speed-theme footer a {
+    color: var(--speed-secondary);
+}
+
+.speed-theme footer a:hover {
+    color: var(--speed-primary);
+}
+
+/* Speed theme sidebar */
+.speed-theme aside {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--speed-primary-20);
+}
+
+/* Speed theme comments */
+.speed-theme .comment {
+    border: 1px solid var(--speed-primary-20);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.speed-theme .comment:hover {
+    border-color: var(--speed-primary-30);
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.1);
+}
+
+/* Speed theme pagination */
+.speed-theme .pagination .page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: var(--radius-sm);
+    background: var(--speed-primary-10);
+    color: var(--speed-primary);
+    transition: all 0.3s ease;
+    border: 1px solid var(--speed-primary-20);
+}
+
+.speed-theme .pagination .page-numbers:hover {
+    background: var(--speed-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.2);
+}
+
+.speed-theme .pagination .current {
+    background: var(--speed-primary);
+    color: white;
+    border-color: var(--speed-primary);
+}
+
+/* Speed theme search */
+.speed-theme .search-form input[type="search"] {
+    border: 2px solid var(--speed-primary-20);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.speed-theme .search-form input[type="search"]:focus {
+    outline: none;
+    border-color: var(--speed-primary);
+    box-shadow: 0 0 0 3px var(--speed-primary-20);
+}
+
+.speed-theme .search-form button {
+    background: var(--speed-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.speed-theme .search-form button:hover {
+    background: var(--speed-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.3);
+}

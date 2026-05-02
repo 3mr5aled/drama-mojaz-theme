@@ -1,0 +1,184 @@
+/* ============================================
+   Dynamic Theme Colors
+   Sports News Theme
+   ============================================ */
+
+/* CSS Variables for Dynamic Colors */
+
+:root {
+    /* Primary Color - Default: #E31B23 (Red) */
+    --primary: #E31B23;
+    --primary-rgb: 227, 27, 35;
+
+    /* Secondary Color - Default: #000000 (Black) */
+    --secondary: #000000;
+    --secondary-rgb: 0, 0, 0;
+
+    /* Primary Color Variations */
+    --primary-50: rgba(var(--primary-rgb), 0.05);
+    --primary-10: rgba(var(--primary-rgb), 0.1);
+    --primary-20: rgba(var(--primary-rgb), 0.2);
+    --primary-30: rgba(var(--primary-rgb), 0.3);
+    --primary-40: rgba(var(--primary-rgb), 0.4);
+    --primary-50-opacity: rgba(var(--primary-rgb), 0.5);
+    --primary-60: rgba(var(--primary-rgb), 0.6);
+    --primary-70: rgba(var(--primary-rgb), 0.7);
+    --primary-80: rgba(var(--primary-rgb), 0.8);
+    --primary-90: rgba(var(--primary-rgb), 0.9);
+
+    /* Secondary Color Variations */
+    --secondary-50: rgba(var(--secondary-rgb), 0.05);
+    --secondary-10: rgba(var(--secondary-rgb), 0.1);
+    --secondary-20: rgba(var(--secondary-rgb), 0.2);
+    --secondary-80: rgba(var(--secondary-rgb), 0.8);
+    --secondary-90: rgba(var(--secondary-rgb), 0.9);
+}
+
+/* Apply primary color to elements */
+.text-primary,
+.hover\:text-primary:hover {
+    color: var(--primary) !important;
+}
+
+.text-primary\/50 {
+    color: var(--primary-50) !important;
+}
+
+.text-primary\/80 {
+    color: var(--primary-80) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.ring-primary {
+    --tw-ring-color: var(--primary) !important;
+}
+
+/* Apply secondary color to elements */
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
+}
+
+/* Hover states */
+.hover\:bg-primary:hover {
+    background-color: var(--primary) !important;
+}
+
+.hover\:bg-primary\/90:hover {
+    background-color: var(--primary-90) !important;
+}
+
+.hover\:border-primary:hover {
+    border-color: var(--primary) !important;
+}
+
+/* Focus states */
+.focus\:border-primary:focus {
+    border-color: var(--primary) !important;
+}
+
+.focus\:ring-primary:focus {
+    --tw-ring-color: var(--primary) !important;
+}
+
+/* Opacity variations */
+.bg-primary\/5 {
+    background-color: var(--primary-50) !important;
+}
+
+.bg-primary\/10 {
+    background-color: var(--primary-10) !important;
+}
+
+.bg-primary\/20 {
+    background-color: var(--primary-20) !important;
+}
+
+.bg-primary\/60 {
+    background-color: var(--primary-60) !important;
+}
+
+.bg-primary\/80 {
+    background-color: var(--primary-80) !important;
+}
+
+.bg-primary\/90 {
+    background-color: var(--primary-90) !important;
+}
+
+.border-primary\/5 {
+    border-color: var(--primary-50) !important;
+}
+
+.border-primary\/10 {
+    border-color: var(--primary-10) !important;
+}
+
+.border-primary\/20 {
+    border-color: var(--primary-20) !important;
+}
+
+/* Shadow with primary color */
+.shadow-primary\/20 {
+    --tw-shadow-color: var(--primary-20) !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* Ring with primary color */
+.ring-primary\/10 {
+    --tw-ring-color: var(--primary-10) !important;
+}
+
+/* Group hover states */
+.group:hover .group-hover\:text-primary {
+    color: var(--primary) !important;
+}
+
+.group:hover .group-hover\:bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Gradient backgrounds */
+.from-primary {
+    --tw-gradient-from: var(--primary) !important;
+}
+
+.to-primary {
+    --tw-gradient-to: var(--primary) !important;
+}
+
+/* ============================================
+   PHP Dynamic Color Injection Support
+   This section will be updated by PHP
+   ============================================ */
+
+/* 
+ * Note: The actual color values will be injected by WordPress
+ * via wp_add_inline_style() in functions.php
+ * This ensures colors from Redux options are applied correctly
+ */
+section.pb-12.md\:pb-16.lg\:pb-20.bg-white.hero-section {
+    margin: 40px;
+}
+
+span.text-4xl.md\:text-5xl.font-black.text-gray-100.group-hover\:text-primary\/10.transition-all.duration-700.italic.leading-none.select-none.inline-block.-translate-y-2 {
+    color: #00000096;
+}
+
+span.flex.items-center.gap-2 {
+    color: #fff;
+}

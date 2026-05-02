@@ -1,0 +1,323 @@
+/* Stories Thumbnail Section */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.story-item .rounded-full {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stories Scroll Snap */
+.stories-wrapper {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.story-item {
+    scroll-snap-align: start;
+}
+
+@keyframes storyOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes storyCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes storyImagePan {
+    from {
+        transform: scale(1.02);
+    }
+
+    to {
+        transform: scale(1.09);
+    }
+}
+
+@keyframes storyUiFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Overlay - Force Full Screen and Black */
+#storyViewer {
+    background: #000 !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 99999 !important;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#storyViewer.active {
+    display: flex !important;
+    opacity: 1 !important;
+    animation: storyOverlayIn 0.25s ease;
+}
+
+/* Image Container */
+.story-container {
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 85vh;
+    position: relative;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+#storyViewer.active .story-container {
+    animation: storyCardIn 0.32s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (max-width: 768px) {
+    .story-container {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+    }
+}
+
+#storyImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #000;
+    will-change: transform;
+}
+
+#storyImage.story-image-animate {
+    animation: storyImagePan 5s linear forwards;
+}
+
+/* Progress Bars */
+#storyProgress {
+    display: flex;
+    gap: 4px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.progress-segment {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    flex: 1;
+    border-radius: 2px;
+    overflow: hidden;
+    animation: storyUiFadeUp 0.2s ease;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #fff;
+    width: 0%;
+}
+
+/* Header & Controls */
+.story-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 101;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    color: #fff;
+}
+
+#storyAuthorAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Story Footer */
+.story-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+    animation: storyUiFadeUp 0.25s ease;
+}
+
+#storyTitle {
+    margin: 0 0 12px;
+    line-height: 1.45;
+}
+
+#storyLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: #ffffff;
+    color: #0f172a !important;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+#storyLink:hover {
+    background: #e2e8f0;
+    color: #0f172a !important;
+}
+
+#storyLink i {
+    margin-right: 8px;
+}
+
+#storyClose {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#storyClose:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #storyViewer.active,
+    #storyViewer.active .story-container,
+    #storyImage.story-image-animate,
+    .progress-segment,
+    .story-footer {
+        animation: none !important;
+    }
+}
+
+#deskPrev,
+#deskNext {
+    display: none !important;
+}
+
+@media (min-width: 1024px) {
+
+    #deskPrev,
+    #deskNext {
+        display: flex !important;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        z-index: 100000;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+    }
+
+    #deskPrev:hover,
+    #deskNext:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    #deskPrev {
+        left: 40px;
+    }
+
+    #deskNext {
+        right: 40px;
+    }
+}
+
+/* Touch Navigation Overlays - Ensure they are invisible */
+#storyPrev,
+#storyNext {
+    background: transparent !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.story-ring {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    padding: 3px;
+    /* سُمك الحلقة */
+    background: conic-gradient(#ff6a00,
+            #ff0057,
+            #ff6a00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #000;
+}

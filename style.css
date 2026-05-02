@@ -1,0 +1,131 @@
+/*
+Theme Name: drama-mojaz-theme
+Theme URI: https://dramamojaz.com/
+Author: Amr Khaled
+Author URI: https://www.facebook.com/3mr5ald1/
+Description: A custom WordPress theme for Drama Mojaz, designed for fast, responsive news and drama content using Tailwind CSS.
+Version: 1.1.0
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: drama-mojaz-theme
+Tags: news, rtl-language-support, custom-menu, featured-images, translation-ready, post-formats, theme-options, threaded-comments
+Domain Path: /languages
+*/
+
+/* Standard WordPress Classes */
+.alignleft {
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0.5em 0 0.5em 1em;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+.gallery-caption {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.bwp-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sticky {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.bypostauthor {
+    border: 1px solid #eee;
+}
+
+/* Hero bottom cards positioning (avoid Tailwind purge issues) */
+.hero-bottom-cards {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.25rem;
+    z-index: 30;
+}
+
+@media (min-width: 768px) {
+    .hero-bottom-cards {
+        left: 2rem;
+        right: 2rem;
+        bottom: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-bottom-cards {
+        bottom: 2rem;
+    }
+}
